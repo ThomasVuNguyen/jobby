@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "578909584286",
+    "project_id": "jobby-9308e",
+    "storage_bucket": "jobby-9308e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:578909584286:android:44f3fc006a266a15b6b48f",
+        "android_client_info": {
+          "package_name": "com.jobby.jobby"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMd1UAkxwzGt-vWnto53wt5M55NqttMXE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,2 +1,3 @@
-# jobby
-An Gemini-powered trainer for your job search
+# Jobby
+
+An AI-powered job search trainer by Gemini.
