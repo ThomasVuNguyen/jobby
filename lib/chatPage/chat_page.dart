@@ -5,10 +5,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_chat_ui/flutter_chat_ui.dart';
 import 'package:flutter_chat_types/flutter_chat_types.dart' as types;
 import 'package:jobby/chatPage/congrats.dart';
+import 'package:jobby/converations/EmployeeCoversation.dart';
 import 'package:jobby/converations/EmployerConversation.dart';
+import 'package:jobby/converations/PotentialCandidatesPage.dart';
 import 'package:jobby/database_function/function.dart';
 import 'package:uuid/uuid.dart';
 
+import '../converations/ExperiencePicker.dart';
 import '../converations/JoblessBoy.dart';
 
 class chatPage extends StatefulWidget {
@@ -81,12 +84,18 @@ class _chatPageState extends State<chatPage> {
         ));
       }
       else{
-        Navigator.push(context, MaterialPageRoute(builder: (context) => JoblessBoy(answers: userAnswer)));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => Employeecoversation(answers: userAnswer)));
       }
     }
     else if(widget.title == 'Employer interest'){
       await add_conversation(userAnswer, context);
-      Navigator.push(context, MaterialPageRoute(builder: (context) => congratPage(title: 'employer',)));
+      Navigator.push(context, MaterialPageRoute(builder: (context) => CheapLaborPage()));
+    }
+    else if(widget.title == 'Tryin to get you a job'){
+      await add_conversation(userAnswer, context);
+      Navigator.push(context, MaterialPageRoute(builder: (context) => ExperiencePicker(
+        job_title: userAnswer['job_title']!, experience: userAnswer['current_experience']!,
+      )));
     }
 
   }

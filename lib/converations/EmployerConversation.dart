@@ -8,7 +8,9 @@ class EmployerConversation extends StatelessWidget {
   Widget build(BuildContext context) {
     return chatPage(
         questions: {
-          'question' :['hi there']
+          'industry' :['What industry are you in?'],
+          'employee_type':['What type of employee do you need (junior or senior)?'],
+          'salary': ['What is your budget for employee\'s salary?'],
         },
         answers: answers,
         title: 'Employer interest');
